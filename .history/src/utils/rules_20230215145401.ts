@@ -1,0 +1,22 @@
+import type { UseFormRegisterReturn } from "react-hook-form";
+
+export const rules: UseFormRegisterReturn = {
+  email:{
+    required: {
+      value: true,
+      message: 'Email là bắt buộc'
+    },
+    pattern: {
+      value: /^\S+@\S+\.\S+$/,
+      message: 'Email không đúng định dạng'
+    },
+    minLength:{
+      value: 5,
+      message: "Độ dài từ 5 - 160 ký tự"
+    },
+    maxLength:{
+      value: 160,
+      message: "Độ dài từ 5 - 160 ký tự"
+    }
+  }
+}
